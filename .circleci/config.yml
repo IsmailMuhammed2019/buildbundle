@@ -16,6 +16,14 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo world
+  print_env_var:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run:
+          name: 'echo out the environmental variable'
+          command: |
+            echo $Name
 workflows:
   # Name the workflow "welcome"
   welcome:
